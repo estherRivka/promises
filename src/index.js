@@ -1,6 +1,4 @@
-﻿const helloTitle = document.createElement('h2');
-helloTitle.innerText = 'Hello';
-document.body.appendChild(helloTitle);
+﻿
 function first() {
     return new Promise((resolve, reject) => {
 
@@ -8,8 +6,9 @@ function first() {
             resolve(Math.floor(Math.random() * Math.floor(10)));
         }, 3000);
     });
-    // then((res)=>console.log(res));   
+   
 }
+
 first().then(console.log);
 
 function makeAllCaps(stringArr) {
@@ -43,6 +42,7 @@ function sortWords(stringArr) {
     });
 
 }
+
 makeAllCaps(["zzz", "1", "aaa", "bbb"])
     .then(sortWords)
     .catch((error) => {
